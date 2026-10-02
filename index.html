@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#e9e7e1" />
+    <meta
+      name="description"
+      content="Morph is a landscape and aerial photographic practice working at the edges of coastlines, ice and open ground."
+    />
+    <title>Morph</title>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("morph-theme");
+          document.documentElement.setAttribute("data-theme", t === "dark" ? "dark" : "light");
+          document.documentElement.setAttribute("data-anim", "on");
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

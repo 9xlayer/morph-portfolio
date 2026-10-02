@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+:root {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-heading: "Bebas Neue", Impact, sans-serif;
+
+  --ground1: #e9e7e1;
+  --ground2: #f2f0ea;
+  --ink: #14130e;
+  --sub: #14130e9e;
+  --faint: #14130e66;
+  --line: #00000029;
+  --lineSoft: #00000014;
+  --panel: #faf9f5f0;
+  --panelLine: #00000024;
+  --edgeTop: 226, 218, 194;
+  --edgeSide: 200, 192, 167;
+  --veil: #eceae3;
+  --cardEdge: #0000001f;
+  --cardBack: #dedbd3;
+  --vignette: #5a544229;
+  --ease: cubic-bezier(0.22, 0.8, 0.25, 1);
+  --easeOut4: cubic-bezier(0.22, 1, 0.36, 1);
+  --easeOut3: cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+[data-theme="dark"] {
+  --ground1: #08080a;
+  --ground2: #0d0d10;
+  --ink: #f3f2ee;
+  --sub: #f3f2ee8f;
+  --faint: #f3f2ee57;
+  --line: #ffffff24;
+  --lineSoft: #ffffff14;
+  --panel: #0b0b0deb;
+  --panelLine: #ffffff1f;
+  --edgeTop: 142, 134, 114;
+  --edgeSide: 121, 114, 95;
+  --veil: #05050a;
+  --cardEdge: #ffffff1a;
+  --cardBack: #0c0c10;
+  --vignette: #00000057;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--ground1);
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: radial-gradient(
+    120% 90% at 68% 24%,
+    var(--ground2) 0%,
+    var(--ground1) 62%
+  )
+    fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100%;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--ground1);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
